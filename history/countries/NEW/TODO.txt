@@ -1,0 +1,8 @@
+BRP = "countries/Banat Republic.txt"
+SLV = "countries/Slovenia.txt"
+WUK = "countries/West Ukraine.txt"
+MRP = "countries/Mountain Republic.txt"
+SWC = "countries/South West Caucus.txt"
+CRG = "countries/Crimean Regional Government.txt"
+SRU = "countries/South of Russia.txt"
+NRU = "countries/Severnyy Krai.txt"
