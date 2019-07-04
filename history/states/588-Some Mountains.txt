@@ -17,8 +17,10 @@ state={
 		}
 		add_core_of = SOV
  
- 	 	 add_core_of = RUS 
+ 	 	 
+		add_core_of = RUS 
 
+		add_core_of = TRK
 		victory_points = {
 			12594 1
 		}

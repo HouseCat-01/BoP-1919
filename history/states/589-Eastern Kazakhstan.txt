@@ -12,8 +12,10 @@ state={
 		}
 		add_core_of = SOV
  
- 	 	 add_core_of = RUS 
+ 	 	 
+		add_core_of = RUS 
 
+		add_core_of = TRK
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 1

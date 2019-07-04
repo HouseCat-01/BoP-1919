@@ -118,3 +118,6 @@
  BRP_paternal_autocrat_DEF:0 "the Banat Republic"
  BRP_fascism:0 "Banat Republic"
  BRP_fascism_DEF:0 "the Banat Republic"
+
+ TRK_communism:0 "Turkestan Autonomous SSR"
+ TRK_communism_DEF:0 "The Turkestan Autonomous SSR"
