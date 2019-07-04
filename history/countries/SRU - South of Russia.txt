@@ -38,20 +38,12 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 15
-		}
-
-		paternal_autocrat = {
-			popularity = 50
-		}
-		
-		communism = {
-			popularity = 35
-		}
-	}
-}
 	ruling_party = paternal_autocrat
 	elections_allowed = no
+}
+set_popularities = {
+	democratic = 15
+	paternal_autocrat = 50
+	communism = 35
+}
+	

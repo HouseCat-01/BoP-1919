@@ -16,50 +16,27 @@ set_technology = {
 	early_fighter = 1
 	early_bomber = 1
 	CAS1 = 1
+	fuel_silos = 1
 }
 
 set_research_slots = 3
 
 set_politics = {
-
-	parties = {
-		syndicalism = {
-			popularity = 10.3
-		}
-		
-		social_democrat = {
-			popularity = 16.3
-		}
-		
-		social_liberal = {
-			popularity = 1.7
-		}
-		
-		market_liberal = {
-			popularity = 19.7
-		}
-		
-		democratic = { 
-			popularity = 16.7
-		}
-
-		neutrality = { 
-			popularity = 8.9
-		}
-		
-		paternal_autocrat = {
-			popularity = 9.2
-		}
-
-		fascism = {
-			popularity = 17.2
-		}
-	}
-	
-	ruling_party = democratic
+	ruling_party = market_liberal
 	last_election = "1935.5.19"
 	election_frequency = 60
 	elections_allowed = yes
+}
+
+set_popularities = {
+	syndicalism = 10.3
+	social_democrat = 16.3
+	social_liberal = 1.7
+	market_liberal = 19.7
+	democratic = 16.7
+	neutrality = 8.9
+	paternal_autocrat = 9.2
+	fascism = 17.2
 }
 
 create_country_leader = {
@@ -67,7 +44,7 @@ create_country_leader = {
 	desc = "POLITICS_EDVARD_BENES_DESC"
 	picture = "Portrait_Czech_Edvard_Benes.dds"
 	expire = "1965.1.1"
-	ideology = democratic_sub
+	ideology = conservatism
 	traits = {
 		#
 	}
@@ -78,7 +55,7 @@ create_country_leader = {
 	desc = "POLITICS_JAROSLAV_KREJCI_DESC"
 	picture = "Portrait_Czech_Jaroslav_Krejci.dds"
 	expire = "1965.1.1"
-	ideology = fascism_sub
+	ideology = nazism
 	traits = {
 		#
 	}
@@ -89,7 +66,7 @@ create_country_leader = {
 	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
 	picture = "Portrait_Czech_Klement_Gottwald.dds"
 	expire = "1965.1.1"
-	ideology = communism_sub
+	ideology = stalinism
 	traits = {
 		#
 	}

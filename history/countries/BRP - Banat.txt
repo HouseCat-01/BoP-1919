@@ -19,30 +19,19 @@ set_technology = {
 
 
 set_politics = {
-	parties = {
-		democratic = { 
-			popularity = 16
-		}
-		paternal_autocrat = {
-			popularity = 3
-		}
-		communism = {
-			popularity = 13
-		}
-		social_democrat = {
-			popularity = 60
-			}
-		market_liberal = {
-			popularity = 8
-			}
-	}
-	
 	ruling_party = social_democrat
 	last_election = "1935.3.31"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
+set_popularities = {
+	democratic = 16
+	paternal_autcrat = 3
+	communism = 13
+	social_democrat = 60
+	market_liberal = 8
+}
 
 create_country_leader = {
 	name = "Otto Roth"

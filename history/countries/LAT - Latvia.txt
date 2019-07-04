@@ -1,6 +1,13 @@
 ﻿capital = 12
 
 oob = "LAT_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "LAT_1936_naval_mtg"
+	else = {
+		set_naval_oob = "LAT_1936_naval_legacy"
+	}
+}
 
 add_ideas = {
 	limited_conscription
@@ -10,7 +17,19 @@ set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	early_fighter = 1
-	early_submarine = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+	}
 }
 
 set_research_slots = 3
@@ -33,6 +52,14 @@ set_convoys = 10
 	complete_national_focus = production_effort
 	
 	oob = "LAT_1939"
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+			set_naval_oob = "LAT_1939_naval_mtg"
+		else = {
+			set_naval_oob = "LAT_1939_naval_legacy"
+		}
+	}
+
 	set_technology = {
 		tech_support = 1		
 		tech_engineers = 1
@@ -61,6 +88,7 @@ set_convoys = 10
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
 		synth_oil_experiments = 1
+		fuel_silos = 1
 		oil_processing = 1
 		improved_oil_processing = 1
 		construction1 = 1
@@ -71,81 +99,27 @@ set_convoys = 10
 }
 
 set_politics = {
-
-	parties = {
-		communism = {
-			popularity = 2.4
-		}
-	
-		syndicalism = {
-			popularity = 8.7
-		}
-		
-		radical_socialism = {
-			popularity = 11.3
-		}
-		
-		social_democrat = {
-			popularity = 20.5
-		}
-		
-		social_liberal = {
-			popularity = 18.9
-		}
-		
-		market_liberal = {
-			popularity = 13.2
-		}
-		
-		democratic = { 
-			popularity = 14.8
-		}
-		
-		neutrality = { 
-			popularity = 7.7
-		}
-		
-		paternal_autocrat = {
-			popularity = 1.4
-		}
-		
-		fascism = {
-			popularity = 1.1
-		}
-	}
-	
 	ruling_party = social_liberal
 	last_election = "1931.10.3"
 	election_frequency = 108
 	elections_allowed = no
 }
+set_popularities = {
+	communism = 2.4
+	syndicalism = 8.7
+	radical_socialism = 11.3
+	social_democrat = 20.5
+	social_liberal = 18.9
+	market_liberal = 13.2
+	democratic = 14.8
+	neutrality = 7.7
+	paternal_autocrat = 1.4
+	fascism = 1.1
+}
 
-1939.1.1 = {# probably needs some adjustment before nazi occupation in 1940
-	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 30
-			}
-
-			fascism = {
-				popularity = 15
-			}
-			
-			communism = {
-				popularity = 15
-			}
-			
-			neutrality = { 
-				popularity = 50
-			}
-		}
-		
-		ruling_party = neutrality
-		last_election = "1931.10.3"
-		election_frequency = 108
-		elections_allowed = no
-	}
+# probably needs some adjustment before nazi occupation in 1940
+1939.1.1 = {
+	#
 }
 
 create_country_leader = {
@@ -153,18 +127,28 @@ create_country_leader = {
 	desc = "POLITICS_KARLIS_ULMANIS_DESC"
 	picture = "GFX_Portrait_latvia_karlis_ulmanis"
 	expire = "1965.1.1"
-	ideology = social_liberal_sub
+	ideology = oligarchism
 	traits = {
 		#
 	}
 }
 
 create_country_leader = {
+	name = "Gustavs Celmiņš"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+create_country_leader = {
 	name = "Fricis Menders"
 	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	picture = "GFX_portrait_lat_fricis_menders"
 	expire = "1965.1.1"
-	ideology = social_democrat_sub
+	ideology = socialism
 	traits = {
 		#
 	}
@@ -172,9 +156,9 @@ create_country_leader = {
 create_country_leader = {
 	name = "Vilis Lacis"
 	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	picture = "GFX_portrait_lat_vilis_lacis"
 	expire = "1965.1.1"
-	ideology = syndicalism_sub
+	ideology = marxism
 	traits = {
 		#
 	}
@@ -189,4 +173,26 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
+}
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Ronis Class"								
+		type = ship_hull_submarine_1
+		name_group = LAT_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
 }

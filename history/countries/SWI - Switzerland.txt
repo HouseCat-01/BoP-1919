@@ -13,6 +13,7 @@ set_technology = {
 	tech_recon = 1
 	early_fighter = 1
 	CAS1 = 1
+	fuel_silos = 1
 }
 
 1939.1.1 = {
@@ -57,83 +58,38 @@ set_technology = {
 		basic_machine_tools = 1
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_processing = 1
-		improved_oil_processing = 1
 		construction1 = 1
 		construction2 = 1
 		dispersed_industry = 1
 		dispersed_industry2 = 1
+		fuel_refining = 1
 	}
 }
 
 set_politics = {
-
-	parties = {
-		syndicalism = {
-			popularity = 1.4
-		}
-		
-		radical_socialism = {
-			popularity = 1.2
-		}
-		
-		social_democrat = {
-			popularity = 28.0
-		}
-		
-		social_liberal = {
-			popularity = 4.1
-		}
-		
-		market_liberal = {
-			popularity = 27.0
-		}
-		
-		democratic = { 
-			popularity = 21.0
-		}
-		
-		neutrality = {
-			popularity = 15.3
-		}
-		
-		paternal_autocrat = {
-			popularity = 1.5
-		}
-
-		fascism = {
-			popularity = 0.5
-		}
-	}
-	
 	ruling_party = social_democrat
 	last_election = "1935.10.27"
 	election_frequency = 48
 	elections_allowed = yes
 }
+set_popularities = {
+	syndicalism = 1.4
+	radical_socialism = 1.2
+	social_democrat = 28.0
+	social_liberal = 4.1
+	market_liberal = 27
+	democratic = 21
+	neutrality = 15.3
+	paternal_autocrat = 1.5
+	fascism = 0.5
+}
 
-1939.1.1 = {#next election october 39
-	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 95
-			}
-
-			fascism = {
-				popularity = 2
-			}
-			
-			communism = {
-				popularity = 3
-			}
-		}
-		
-		ruling_party = social_democrat
-		last_election = "1935.10.27"
-		election_frequency = 48
-		elections_allowed = yes
+1939.1.1 = {
+	#next election october 39
+	set_popularities = {
+		democratic = 95
+		fascism = 2
+		communism = 3
 	}
 }
 
@@ -149,51 +105,18 @@ create_country_leader = {
 	desc = "POLITICS_FEDERAL_COUNCIL_DESC"
 	picture = "Portrait_Switzerland_Federal_council.dds"
 	expire = "1965.1.1"
-	ideology = social_democrat_sub
+	ideology = conservatism
 	traits = {
 		#
 	}
 }
 
 create_country_leader = {
-	name = "Federal Council"
-	desc = "POLITICS_FEDERAL_COUNCIL_DESC"
-	picture = "Portrait_Switzerland_Federal_council.dds"
+	name = "Ernest Béuin"
+	desc = "POLITICS_ERNST_BEGUIN_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
 	expire = "1965.1.1"
-	ideology = social_liberal_sub
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Federal Council"
-	desc = "POLITICS_FEDERAL_COUNCIL_DESC"
-	picture = "Portrait_Switzerland_Federal_council.dds"
-	expire = "1965.1.1"
-	ideology = market_liberal_sub
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Federal Council"
-	desc = "POLITICS_FEDERAL_COUNCIL_DESC"
-	picture = "Portrait_Switzerland_Federal_council.dds"
-	expire = "1965.1.1"
-	ideology = democratic_sub
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Federal Council"
-	desc = "POLITICS_FEDERAL_COUNCIL_DESC"
-	picture = "Portrait_Switzerland_Federal_council.dds"
-	expire = "1965.1.1"
-	ideology = neutrality_sub
+	ideology = centrism
 	traits = {
 		#
 	}
@@ -204,7 +127,7 @@ create_country_leader = {
 	desc = "POLITICS_MAX_LEO_KELLER_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds" 
 	expire = "1965.1.1"
-	ideology = paternal_autocrat_sub
+	ideology = nazism
 	traits = {
 		#
 	}
@@ -215,7 +138,7 @@ create_country_leader = {
 	desc = "POLITICS_FRITZ_PLATTEN_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 	expire = "1965.1.1"
-	ideology = syndicalism_sub
+	ideology = marxism
 	traits = {
 		#
 	}

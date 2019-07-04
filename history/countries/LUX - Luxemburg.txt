@@ -53,8 +53,7 @@ set_stability = 0.8
 		basic_machine_tools = 1
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_processing = 1
+		fuel_silos = 1
 		construction1 = 1
 		construction2 = 1
 		concentrated_industry = 1
@@ -63,64 +62,24 @@ set_stability = 0.8
 }
 
 set_politics = {
-
-	parties = {
-		syndicalism = {
-			popularity = 5.2
-		}
-		
-		radical_socialism = {
-			popularity = 11.6
-		}
-		
-		social_democrat = {
-			popularity = 29.4
-		}
-		
-		social_liberal = {
-			popularity = 0.1
-		}
-		
-		market_liberal = {
-			popularity = 10.3
-		}
-		
-		democratic = { 
-			popularity = 41.5
-		}
-		
-		paternal_autocrat = {
-			popularity = 1.9
-		}
-
-		fascism = {
-			popularity = 0
-		}
-	}
-	
 	ruling_party = democratic
 	last_election = "1934.6.3"
 	election_frequency = 36
 	elections_allowed = yes
 }
+set_popularities = {
+	syndicalism = 5.2
+	radical_socialism = 11.6
+	social_democrat = 29.4
+	social_liberal = 0.1
+	market_liberal = 10.3
+	democratic = 41.5
+	paternal_autocart = 1.9
+	fascism = 0
+}
 
 1939.1.1 = {
 	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 92
-			}
-
-			fascism = {
-				popularity = 3
-			}
-			
-			communism = {
-				popularity = 5
-			}
-		}
-		
 		ruling_party = democratic
 		last_election = "1937.6.6"
 		election_frequency = 36
@@ -132,7 +91,7 @@ set_politics = {
 		desc = "POLITICS_PIERRE_DUPONG_DESC"
 		picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
 		expire = "1965.1.1"
-		ideology = democratic_sub
+		ideology = conservatism
 		traits = {
 			#
 		}
@@ -144,7 +103,7 @@ create_country_leader = {
 	desc = "POLITICS_JOSEPH_BECH_DESC"
 	picture = "GFX_portrait_luxembourg_joseph_bech"
 	expire = "1965.1.1"
-	ideology = democratic_sub
+	ideology = conservatism
 	traits = {
 		#
 	}

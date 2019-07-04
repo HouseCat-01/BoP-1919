@@ -184,7 +184,7 @@ MAC = "countries/Macedonia.txt"
 NIR = "countries/Northern Ireland.txt"
 
 BRP = "countries/Banat Republic.txt"
-SLV = "countries/Slovenia.txt"
+#SLV = "countries/Slovenia.txt"
 WUK = "countries/West Ukraine.txt"
 MRP = "countries/Mountain Republic.txt"
 SWC = "countries/South West Caucus.txt"
