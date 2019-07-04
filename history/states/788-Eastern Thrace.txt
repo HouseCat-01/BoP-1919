@@ -1,0 +1,22 @@
+state={
+	id=788
+	name="STATE_788"
+	history={
+		victory_points = {
+			11905 1 
+		}
+		owner = BUL
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = GRE
+		add_claim_by = BUL
+
+	}	
+	provinces={
+		11774 11905 
+	}
+	manpower=150000
+	buildings_max_level_factor=1.000
+}
