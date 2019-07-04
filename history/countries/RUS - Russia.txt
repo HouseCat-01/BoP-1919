@@ -1,4 +1,4 @@
-capital = 571 #OMSK
+﻿capital = 571 #OMSK
 
 oob = "UKR_1936"
 
@@ -62,7 +62,7 @@ create_country_leader = {
 	}
 }
 
-create_faction = All-Russian Government
+create_faction = All-Russian-Government
 add_to_faction = RUS
 add_to_faction = NRU
 add_to_faction = CRG
