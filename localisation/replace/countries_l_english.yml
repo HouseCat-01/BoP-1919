@@ -665,7 +665,7 @@
  FIN_paternal_autocrat:0 "Finnish State"
  FIN_paternal_autocrat_DEF:0 "Finnish State"
  FIN_fascism:0 "Greater Finland"
- FIN_fascism_DEF:0 "Greater Finland" 
+ FIN_fascism_DEF:0 "Greater Finland"
  FIN_communism_ADJ:0 "Finnish"
  FIN_syndicalism_ADJ:0 "Finnish"
  FIN_radical_socialism_ADJ:0 "Finnish"
@@ -1479,8 +1479,8 @@
  JOR_democratic_ADJ:0 "Jordanian"
  EGY_democratic:0 "Egypt"
  EGY_democratic_DEF:0 "Egypt"
- EGY_neutrality:0 "Kingdom of Egypt"
- EGY_neutrality_DEF:0 "the Kingdom of Egypt"
+ EGY_neutrality:0 "Sultanate of Egypt"
+ EGY_neutrality_DEF:0 "the Sultanate of Egypt"
  EGY_fascism:0 "Imperial Kemet"
  EGY_fascism_DEF:0 "Imperial Kemet"
  EGY_communism:0 "Soviet Nile State"
@@ -1491,8 +1491,8 @@
  EGY_democratic_ADJ:0 "Egyptian"
  LBA_neutrality:0 "Kingdom of Libya"
  LBA_neutrality_DEF:0 "Libya"
- LBA_democratic:0 "Libyan Electorate"
- LBA_democratic_DEF:0 "the Libyan Electorate"
+ LBA_democratic:0 "Libyan Republic"
+ LBA_democratic_DEF:0 "the Republic of Libya"
  LBA_fascism:0 "Africa Nova"
  LBA_fascism_DEF:0 "Africa Nova"
  LBA_communism:0 "Libyan Socialist Republic"
@@ -1931,8 +1931,11 @@
  RUS_paternal_autocrat_DEF:0 "the All-Russian Government"
  RUS_fascism:0 "All-Russian Government"
  RUS_fascism_DEF:0 "the All-Russian Government"
- 
- 
+
+ SUD_neutrality:0 "Anglo-Egyptian Sudan"
+ SUD_neutrality_DEF:0 "Anglo-Egyptian Sudan"
+
+
  FACTION_NAME_DEMOCRATIC_1:0 "The $CONTINENT_ADJ$ Association"
  FACTION_NAME_DEMOCRATIC_2:0 "The $CONTINENT_ADJ$ Entente"
  FACTION_NAME_DEMOCRATIC_3:0 "The $LEADER_COUNTRY_ADJ$ Concordat"
@@ -1954,4 +1957,3 @@
  FACTION_NAME_NONALIGNED_3:0 "The $CONTINENT$ Alliance"
  FACTION_NAME_NONALIGNED_4:0 "Confederate $CONTINENT_ADJ$ Nations"
  FACTION_NAME_NONALIGNED_5:0 "The $LEADER_COUNTRY$ Coalition"
- 

@@ -39,10 +39,10 @@ set_technology = {
 	naval_bomber1 = 1
 	early_bomber = 1
 	CAS1 = 1
-	
+
 	trench_warfare = 1
 
-	
+
 	fleet_in_being = 1
 	electronic_mechanical_engineering = 1
 	radio = 1
@@ -108,7 +108,7 @@ add_ideas = {
 	ENG_the_war_to_end_all_wars
 	george_v
 }
-	
+
 
 set_convoys = 800
 
@@ -149,9 +149,21 @@ if = {
 		autonomous_state = autonomy_dominion
 		freedom_level = 0.2
 	}
+	set_autonomy = {
+			target = EGY
+			autonomous_state = autonomy_dominion
+			freedom_level = 0.4
+		}
+	set_autonomy = {
+				target = SUD
+				autonomous_state = autonomy_colony
+				freedom_level = 0.2
+			}
 	else = {
 		puppet = MAL
 		puppet = RAJ
+		puppet = EGY
+		puppet = SUD
 	}
 }
 
@@ -165,7 +177,7 @@ if = {
 1939.1.1 = {
 
 	add_political_power = 1198
-	
+
 	#adding ministers
 	add_ideas = {
 		ENG_ernest_bevin
@@ -173,7 +185,7 @@ if = {
 		rsaf_enfield
 		archibald_wavell
 		charles_portal
-		english_electric		
+		english_electric
 
 		#laws
 		partial_economic_mobilisation
@@ -182,7 +194,7 @@ if = {
 		ENG_george_vi
 	}
 
-	
+
 create_country_leader = {
 	name = "Neville Chamberlain"
 	desc = "POLITICS_NEVILLE_CHAMBERLAIN_DESC"
@@ -207,7 +219,7 @@ create_country_leader = {
 	complete_national_focus = uk_commonwealth_focus
 
 	give_guarantee = POL
-	
+
 	set_oob = "ENG_1939"
 	if = {
 		limit = {
@@ -239,7 +251,7 @@ create_country_leader = {
 		infantry_weapons2 = 1
 		support_weapons = 1
 		support_weapons2 = 1
-		
+
 
 		#doctrines
 		#Air
@@ -306,7 +318,7 @@ create_country_leader = {
 			improved_ship_hull_light = 1
 			improved_ship_hull_cruiser = 1
 			basic_ship_hull_heavy = 1
-			
+
 			improved_ship_hull_carrier = 1
 			dp_secondary_battery = 1
 			improved_sonar = 1
@@ -328,7 +340,7 @@ set_politics = {
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
 }
 
-set_popularities = {	
+set_popularities = {
 	syndicalism = 0.8
 	radical_socialism = 0.7
 	social_democrat = 39.7
@@ -386,7 +398,7 @@ create_country_leader = {
 #	expire = "1965.1.1"
 #	ideology = liberalism
 #	traits = {
-#		
+#
 #	}
 #}
 
@@ -420,7 +432,7 @@ create_country_leader = {
 #	expire = "1965.1.1"
 #	ideology = leninism
 #	traits = {
-#		
+#
 #	}
 #}
 
@@ -441,7 +453,7 @@ create_field_marshal = {
 	id = 996
 	picture = "Portrait_Britain_Bernard_Montgomery.dds"
 	traits = { logistics_wizard offensive_doctrine media_personality trait_cautious inflexible_strategist organizer }
-	skill = 4 
+	skill = 4
 	attack_skill = 2
 	defense_skill = 4
 	planning_skill = 3
@@ -666,7 +678,7 @@ create_corps_commander = {
 	picture = "Portrait_Britain_Brian_Horrocks.dds"
 	traits = {  armor_officer career_officer war_hero }
 	skill = 3
-	
+
 	attack_skill = 1
 	defense_skill = 3
 	planning_skill = 3
@@ -1419,7 +1431,7 @@ if = {
 		}
 		obsolete = yes
 	}
-	
+
 	create_equipment_variant = {
 		name = "Hermes Class"
 		type = ship_hull_carrier_conversion_ca
@@ -1466,7 +1478,7 @@ if = {
 				front_1_custom_slot = ship_deck_space
 			}
 		}
-	
+
 }
 1939.1.1 = {
 	if = {
@@ -1498,7 +1510,7 @@ if = {
 		limit = {
 			has_dlc = "Man the Guns"
 		}
-		
+
 		create_equipment_variant = {
 			name = "Illustrious Class"
 			type = ship_hull_carrier_2
