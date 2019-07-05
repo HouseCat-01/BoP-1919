@@ -542,8 +542,11 @@ TRK = {
 	color = rgb { 253 101 96 }
 	color_ui = rgb { 163 17 31 }
 }
-
 MRZ = {
 	color = rgb { 253 134 150 }
 	color_ui = rgb { 255 169 161 }
+}
+BRP = {
+	color = rgb { 7 176 121 }
+	color_ui = rbg { 7 161 110 }
 }
