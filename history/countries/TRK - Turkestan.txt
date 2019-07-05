@@ -5,18 +5,18 @@ capital = 405
 OOB = "UKR_1936"
 
 set_politics = {
-	ruling_party = communist
+	ruling_party = communism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
 	fascism = 0
-	communism = 65
+	communism = 60
 	neutrality = 10
 	democratic = 5
 	paternal_autocrat = 10
-	radical_socialist = 8
+	radical_socialism = 8
 	social_democrat = 7
 }
 

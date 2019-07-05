@@ -74,7 +74,7 @@ set_popularities = {
 	social_liberal = 0.1
 	market_liberal = 10.3
 	democratic = 41.5
-	paternal_autocart = 1.9
+	paternal_autocrat = 1.9
 	fascism = 0
 }
 

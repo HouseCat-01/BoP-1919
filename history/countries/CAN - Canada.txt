@@ -177,7 +177,7 @@ set_politics = {
 }
 
 set_popularities = {
-	communsim = 0.46
+	communism = 0.46
 	syndicalism = 0.33
 	radical_socialism = 0.17
 	social_democrat = 0.32

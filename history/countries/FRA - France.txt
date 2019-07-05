@@ -218,7 +218,7 @@ set_popularities = {
 	social_liberal = 17.48
 	market_liberal = 6.19
 	democratic = 44.05
-	neutralisty =5.2
+	neutrality =5.2
 	paternal_autocrat = 1.57
 }
 

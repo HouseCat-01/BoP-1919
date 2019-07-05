@@ -27,7 +27,7 @@ set_politics = {
 
 set_popularities = {
 	democratic = 16
-	paternal_autcrat = 3
+	paternal_autocrat = 3
 	communism = 13
 	social_democrat = 60
 	market_liberal = 8
