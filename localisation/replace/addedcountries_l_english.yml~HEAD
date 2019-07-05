@@ -120,7 +120,12 @@
  BRP_fascism:0 "Banat Republic"
  BRP_fascism_DEF:0 "the Banat Republic"
 
+<<<<<<< HEAD:localisation/replace/addedcountries_l_english.yml
+ TRK_communism:0 "Turkestan Socialist Federative Republic"
+ TRK_communism_DEF:0 "The Turkestan Socialist Federative Republic"
+=======
  TRK_communism:0 "Turkestan Autonomous SSR"
  TRK_communism_DEF:0 "The Turkestan Autonomous SSR"
  JAB_neutrality:0 "Emirate of Jabal Shammar"
  JAB_neutrality_def:0 "The Emirate of Jabal Shammar"
+>>>>>>> 37ff292... Added Hejaz, Jabbal Shammar:localisation/countries_lI_english.yml
