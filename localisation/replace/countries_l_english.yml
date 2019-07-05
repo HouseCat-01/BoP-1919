@@ -1633,6 +1633,8 @@
  UKR_democratic_ADJ:0 "Ukrainian"
  UKR_neutrality_ADJ:0 "Ukrainian"
  UKR_communism_ADJ:0 "Ukrainian"
+ UKR_paternal_autocrat:0 "Ukrainian People's Republic"
+ UKR_paternal_autocrat_DEF:0 "The Ukrainian People's Republic"
  GEO_fascism:0 "Caucasus Authority"
  GEO_fascism_DEF:0 "the Caucasus Authority"
  GEO_democratic:0 "Republic of Georgia"
