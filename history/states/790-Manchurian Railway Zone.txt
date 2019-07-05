@@ -1,9 +1,19 @@
 state={
 	id=790
 	name="STATE_790"
-	provinces={
-		810 
+	history = {
+		owner = MRZ
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
 	}
-	manpower=0
+	manpower=100000
+	state_category=rural
 	buildings_max_level_factor=1.000
+	
+	provinces = {
+		887 1567 1571 1847 3815 3843 3913 4852 7591 7663 7670 7697 7767 7897 10379 10503 10567 11864 12355 12618
+	}
 }
