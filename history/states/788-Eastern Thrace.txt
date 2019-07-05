@@ -1,6 +1,7 @@
 state={
 	id=788
 	name="STATE_788"
+	state_category=rural
 	history={
 		victory_points = {
 			11905 1 
