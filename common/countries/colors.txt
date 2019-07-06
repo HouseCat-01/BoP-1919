@@ -548,5 +548,5 @@ MRZ = {
 }
 BRP = {
 	color = rgb { 7 176 121 }
-	color_ui = rbg { 7 161 110 }
+	color_ui = rgb { 7 161 110 }
 }
