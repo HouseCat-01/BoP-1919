@@ -1,0 +1,22 @@
+ideas = {
+	country = {
+		HUN_disjointed_government = {
+			name = disjointed_government
+			allowed = { tag = HUN }
+			modifier = {
+				stability_factor = -0.1
+				political_power_cost = 0.10
+			}
+		}
+		HUN_government_crisis = {
+			name = government_crisis
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.2
+				stability_weekly = -0.05
+				political_power_cost = 0.20
+			}
+		}
+			
+	}
+}

@@ -41,7 +41,7 @@ set_politics = {
 	ruling_party = paternal_autocrat
 	elections_allowed = no
 }
-parties = {
+set_popularities = {
 	democratic = 15
 	paternal_autocrat = 50
 	communism = 35
