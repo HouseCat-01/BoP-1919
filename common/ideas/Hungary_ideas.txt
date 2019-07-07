@@ -21,8 +21,8 @@ ideas = {
 			name = agricultural_propaganda
 			allowed = { always = no }
 			modifier = {
-				stability_weekly = 0.1
-				communism_drift = 0.05
+				stability_weekly = 0.05
+				communism_drift = 0.04
 			}
 		}
 		HUN_establishing_the_DOTP = {
@@ -32,6 +32,21 @@ ideas = {
 				stability_factor = -0.1
 				stability_weekly = 0.05
 			}
-		}	
+		}
+		HUN_red_terror = {
+			name = the_red_terror
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+		HUN_collectivization = {
+			name = collectivization
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
 	}
 }

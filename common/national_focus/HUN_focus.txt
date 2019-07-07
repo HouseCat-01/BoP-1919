@@ -103,16 +103,13 @@ focus_tree = {
 		id = HUN_nationalizetheestates
 		x = 13
 		y = 2
-		cost = 0
+		cost = 1
 		prerequisite = { focus = HUN_mergewithkmp }
 		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
-			}
+
 			add_timed_idea = {
 				idea = HUN_agricultural_propaganda
-				days = 60
+				days = 30
 			}
 		}
 	}
@@ -122,20 +119,21 @@ focus_tree = {
 		id = HUN_collectivization
 		x = 12
 		y = 3
-		cost = 0
+		cost = 1
 		prerequisite = { focus = HUN_nationalizetheestates }
 		mutually_exclusive = { focus = HUN_landtopeasants }
-		#completion_reward = {
-			#consumer_goods_factor = -0.08
-		#}
+		completion_reward = {
+			add_ideas = { HUN_collectivization }
+		}
 	}
 	
 	#Distribute land to peasants
+	#need to add an if block that only uses modify_timed_idea if idea already present, otherwise reapply timed_idea
 	focus = {
 		id = HUN_landtopeasants
 		x = 14
 		y = 3
-		cost = 0
+		cost = 1
 		prerequisite = { focus = HUN_nationalizetheestates }
 		mutually_exclusive = { focus = HUN_collectivization }
 		completion_reward = {
@@ -151,7 +149,7 @@ focus_tree = {
 		id = HUN_dotp
 		x = 18
 		y = 2
-		cost = 0
+		cost = 1
 		prerequisite = { focus = HUN_mergewithkmp }
 		completion_reward = {
 			add_timed_idea = { 
@@ -166,7 +164,7 @@ focus_tree = {
 		id = HUN_internationalism
 		x = 16
 		y = 3
-		cost = 0
+		cost = 1
 		prerequisite = { focus = HUN_dotp }
 		completion_reward = {
 			SOV = { country_event = { id = rsfr.1 } }
@@ -178,8 +176,14 @@ focus_tree = {
 		id = HUN_calluponthersfr
 		x = 16
 		y = 4
-		cost = 0
-		available = { has_war = yes }
+		cost = 1
+		available = { 
+			has_government = communsim
+			AND = { 
+				 
+				has_war = yes 
+			}
+		}
 		prerequisite = { focus = HUN_internationalism }
 		completion_reward = {
 			SOV = {
@@ -190,7 +194,69 @@ focus_tree = {
 				}
 			}
 		}
+	}
 	
+	focus = {
+		id = HUN_purgetheright
+		x = 18
+		y = 3
+		cost = 1
+		prerequisite = { focus = HUN_dotp }
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.08
+			}
+		}
+	}
+	
+	focus = {
+		id = HUN_removethesocdems
+		x = 18
+		y = 4
+		prerequisite = { focus = HUN_purgetheright }
+		cost = 1
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	
+	#The Red Terror - Unlocks more decisions
+	focus = { 
+		id = HUN_redterror
+		x = 20
+		y = 3
+		cost = 1
+		prerequisite = { focus = HUN_dotp }
+		available = { has_government = communism }
+		completion_reward = {
+			#add mission start here
+			add_ideas = { HUN_red_terror }
+		}
+	}
 	
 	#End of focuses 
  }
