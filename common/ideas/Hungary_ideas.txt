@@ -4,8 +4,8 @@ ideas = {
 			name = disjointed_government
 			allowed = { tag = HUN }
 			modifier = {
-				stability_factor = -0.1
-				political_power_cost = 0.10
+				stability_factor = -0.20
+				political_power_cost = 0.25
 			}
 		}
 		HUN_government_crisis = {

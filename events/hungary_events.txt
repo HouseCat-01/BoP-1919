@@ -13,10 +13,13 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = { add_ideas = HUN_government_crisis }
+	
 	option = { #comply
 		name = hungary1919.1.a
 		ai_chance = { base = 1 }
 		complete_national_focus = HUN_acceptthevixnote
+		remove_ideas = HUN_government_crisis
 	}
 	
 	option = { #resign
@@ -24,6 +27,7 @@ country_event = {
 		ai_chance = { base = 10 }
 		complete_national_focus = HUN_karolyiresigns
 		HUN = { country_event = {days = 1 id = hungary1919.2} }
+		remove_ideas = HUN_government_crisis
 	}
 }
 country_event = { #soc-dems negotiate with communists
