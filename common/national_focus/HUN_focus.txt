@@ -97,6 +97,50 @@ focus_tree = {
 			}
 		}
 	}
-		
+	
+	#Nationalize the estates
+	focus = {
+		id = HUN_nationalizetheestates
+		x = 7
+		y = 5
+		prerequisite = { focus = HUN_mergewithkmp }
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_timed_idea = {
+				idea = HUN_agricultural_propaganda
+				days = 60
+			}
+		}
+	}
+	
+	#Introduce collectivization
+	focus = {
+		id = HUN_collectivization
+		x = 6
+		y = 7
+		prerequisite = { focus = HUN_nationalizetheestates }
+		mutually_exclusive = { focus = HUN_landtopeasants }
+		completion_reward = {
+			consumer_goods_factor = -0.08
+		}
+	}
+	
+	#Distribute land to peasants
+	focus = {
+		id = HUN_landtopeasants
+		x = 8
+		y = 7
+		prerequisite = { focus = HUN_collectivization }
+		mutually_exclusive = { focus = HUN_collectivization }
+		completion_reward = {
+			modify_timed_idea = {
+				idea = HUN_agricultural_propaganda
+				days = 40
+			}
+		}
+	}
 	#End of focuses 
  }

@@ -17,6 +17,14 @@ ideas = {
 				political_power_cost = 0.20
 			}
 		}
+		HUN_agricultural_propaganda = {
+			name = agricultural_propaganda
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.1
+				communism_drift = 0.05
+			}
+		}
 			
 	}
 }
