@@ -1,0 +1,101 @@
+focus_tree = { 
+	id = HUN_INITIAL
+	country = { 
+		factor = 0 
+		modifier = { 
+		add = 100 
+		tag = HUN 
+		} 
+	} 
+	#Focus for Accept the Vix Note
+	focus = { 
+		id = HUN_acceptthevixnote
+		icon = GFX_goal_tripartite_pact
+		x = 3
+		y = 0
+		available = { always = no }
+		cost = 10
+		available_if_capitulated = yes 
+		mutually_exclusive = { focus = HUN_karolyiresigns } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	} 
+
+	#Focus for Karolyi Resigns
+	focus = { 
+		id = HUN_karolyiresigns
+		icon = GFX_focus_rom_coup
+		x = 7
+		y = 0
+		cost = 10
+		available = { always = no }
+		available_if_capitulated = yes 
+		mutually_exclusive = { focus = HUN_acceptthevixnote } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			set_politics = {
+				ruling_party = social_democrat
+				elections_allowed = yes
+			}
+		}
+	} 
+	
+	#If the soc-dems and communists are in power
+	focus = {
+		id = HUN_mergewithkmp
+		icon = GFX_focus_rom_coup
+		x = 9
+		y = 3
+		cost = 4
+		prerequisite = {
+			focus = HUN_karolyiresigns
+		}
+		available = { 
+			has_country_flag = united_left
+		}
+		mutually_exclusive = { focus = HUN_sidewithnationalists } 
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+	}
+	
+	#Soc-dem party sides with the nationalists
+	focus = {
+		id = HUN_sidewithnationalists
+		x = 5
+		y = 3
+		cost = 4
+		prerequisite = {
+			focus = HUN_karolyiresigns
+		}
+		mutually_exclusive = { focus = HUN_mergewithkmp } 
+		available = {
+			NOT = { has_country_flag = united_left }
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+		
+	#End of focuses 
+ }

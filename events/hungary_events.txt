@@ -1,0 +1,59 @@
+﻿###########
+#Hunagry Events
+###########
+
+add_namespace = hungary1919
+
+# Vix Note Issued
+country_event = {
+	id = hungary1919.1
+	title = hungary1919.1.t
+	desc = hungary1919.1.d
+	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #comply
+		name = hungary1919.1.a
+		ai_chance = { base = 1 }
+		complete_national_focus = HUN_acceptthevixnote
+	}
+	
+	option = { #resign
+		name = hungary1919.1.b
+		ai_chance = { base = 10 }
+		complete_national_focus = HUN_karolyiresigns
+		HUN = { country_event = {days = 1 id = hungary1919.2} }
+	}
+}
+country_event = { #soc-dems negotiate with communists
+	id = hungary1919.2
+	title = hungary1919.2.t
+	desc = hungary1919.2.d
+	
+	is_triggered_only = yes 
+	
+	option = { #merge
+		name = hungary1919.2.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.10
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.05
+		}
+		add_stability = 0.05
+		set_country_flag = united_left
+		complete_national_focus = HUN_mergewithkmp
+	}
+	
+	option = { #no merge
+		name = hungary1919.2.b
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
+		add_stability = -0.02
+	}
+}
