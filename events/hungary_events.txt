@@ -66,3 +66,65 @@ country_event = { #soc-dems negotiate with communists
 		add_stability = -0.02
 	}
 }
+
+#Hungary demands upper hungary (southern slovakia)
+country_event = {
+	id = hungary1919.3
+	title = hungary1919.3.t
+	desc = hungary1919.3.d
+	
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = hungary1919.3.a
+		HUN = { 
+			transfer_state = 664 
+			country_event = { id = hungary1919.5 days = 1 }
+		}
+	}
+	option = { #refuse
+		name = hungary1919.3.b
+		HUN = { country_event = {id = hungary1919.4 days = 1 } }
+	}
+}
+
+#If czechoslovakia refuses to cede southern slovakia
+country_event = {
+	id = hungary1919.4
+	title = hungary1919.4.t
+	desc = hungary1919.d
+	
+	is_triggered_only = yes
+	
+	option = { #to war
+		name = hunagry.4.a
+		HUN = { declare_war_on = {
+				type = take_claimed_state
+				target = CZE
+			}
+		}
+	}
+	option = { #concede
+		name = hungary.4.b
+		add_ideas = HUN_nationalist_agitation
+		add_timed_idea = {
+			idea = HUN_nationalist_reaction
+			days = 45
+		}
+	}
+}
+
+#If czechoslovakia agrees to cede southern slovakia
+country_event = { #news event
+	id = hungary1919.5
+	title = hungary1919.5.t
+	desc = hungary1919.5.d
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary1919.5.a
+	}
+}

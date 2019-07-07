@@ -52,6 +52,7 @@ focus_tree = {
 				ruling_party = social_democrat
 				elections_allowed = yes
 			}
+			remove_ideas = { HUN_disjointed_government }
 		}
 	} 
 	
@@ -74,7 +75,7 @@ focus_tree = {
 				ruling_party = communism
 				elections_allowed = no
 			}
-			remove_ideas = { HUN_communist_agitation }
+			remove_ideas = { HUN_communist_agitators }
 		}
 	}
 	
@@ -266,7 +267,7 @@ focus_tree = {
 		cost = 1
 		prerequisite = { focus = HUN_sidewithnationalists }
 		completion_reward = {
-			remove_ideas = { HUN_communist_agitation }
+			remove_ideas = { HUN_communist_agitators }
 		}
 	}
 	
@@ -303,5 +304,21 @@ focus_tree = {
 			}
 		}
 	}
+	
+	#Demand upper Hungary
+	focus = {
+		id = HUN_demandupperhungary
+		x = 9
+		y = 4
+		cost = 1
+		prerequisite = { focus = HUN_warwithromania }
+		completion_reward {
+			CZE = { country_event = { id = hungary1919.3 days = 1 } }
+		}
+	}
+	
+	#Demand Banat
+	
+	#Call upon the szkelers
 	#End of focuses 
  }

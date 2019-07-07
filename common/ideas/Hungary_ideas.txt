@@ -6,14 +6,18 @@ ideas = {
 			modifier = {
 				stability_factor = -0.20
 				political_power_cost = 0.25
+				war_support_factor = -0.10
+				conscription_factor = -0.10
 			}
 		}
-		HUN_communist_agitation = {
-			name = communist_agitation
+		HUN_communist_agitators = {
+			name = communist_agitators
 			allowed = { tag = HUN }
 			modifier = {
 				stability_factor = -0.15
-				political_power_cost = 0.15
+				political_power_cost = 0.20
+				war_support_factor = -0.15
+				conscription_factor = -0.25
 			}
 		}
 		HUN_government_crisis = {
@@ -54,6 +58,32 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.05
+			}
+		}
+		HUN_nationalist_agitation = {
+			name = nationalist_agitation
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.10
+				conscription_factor = -0.10
+			}
+		}
+		HUN_nationalist_reaction = {
+			name = nationalist_reaction
+			allowed = { always = no }
+			modifier = {
+				conscription_factor = -0.40
+				war_support_factor = -0.10
+				stability_factor = -0.10
+			}
+		}
+		HUN_nationalist_support = {
+			name = nationalist_support
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.10
+				stability_factor = 0.05
+				conscription_factor = 0.10
 			}
 		}
 	}
