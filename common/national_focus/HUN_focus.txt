@@ -74,6 +74,7 @@ focus_tree = {
 				ruling_party = communism
 				elections_allowed = no
 			}
+			remove_ideas = { HUN_communist_agitation }
 		}
 	}
 	
@@ -178,9 +179,8 @@ focus_tree = {
 		y = 4
 		cost = 1
 		available = { 
-			has_government = communsim
 			AND = { 
-				 
+				has_government = communism
 				has_war = yes 
 			}
 		}
@@ -258,5 +258,50 @@ focus_tree = {
 		}
 	}
 	
+	#Suppress the KMP
+	focus = {
+		id = HUN_suppressthecommunists
+		x = 7
+		y = 2
+		cost = 1
+		prerequisite = { focus = HUN_sidewithnationalists }
+		completion_reward = {
+			remove_ideas = { HUN_communist_agitation }
+		}
+	}
+	
+	#peace with Romania
+	focus = {
+		id = HUN_peacewithromania
+		x = 7
+		y = 3
+		cost = 1
+		prerequisite = { focus = HUN_suppressthecommunists }
+		mutually_exclusive = { focus = HUN_warwithromania }
+		completion_reward {
+		
+		}
+	}
+	
+	#war with Romania
+	focus = {
+		id = HUN_warwithromania
+		x = 10
+		y = 3
+		cost = 1
+		prerequisite = { 
+			
+				focus = HUN_suppressthecommunists
+				focus = HUN_mergewithkmp 
+			
+		}
+		mutually_exclusive = { focus = HUN_peacewithromania }
+		completion_reward = {
+			declare_war_on = {
+				type = take_claimed_state
+				target = ROM
+			}
+		}
+	}
 	#End of focuses 
  }

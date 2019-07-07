@@ -8,6 +8,14 @@ ideas = {
 				political_power_cost = 0.25
 			}
 		}
+		HUN_communist_agitation = {
+			name = communist_agitation
+			allowed = { tag = HUN }
+			modifier = {
+				stability_factor = -0.15
+				political_power_cost = 0.15
+			}
+		}
 		HUN_government_crisis = {
 			name = government_crisis
 			allowed = { always = no }
