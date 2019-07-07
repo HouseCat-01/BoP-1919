@@ -1,0 +1,15 @@
+﻿ideas = {
+	country = {
+		SOV_abandoned_ally = {
+			name = abandoned_allly
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.05
+				add_popularity = {
+					ideology = communism
+					popularity = -0.05
+				}
+			}
+		}
+	}
+}

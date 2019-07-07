@@ -25,6 +25,13 @@ ideas = {
 				communism_drift = 0.05
 			}
 		}
-			
+		HUN_establishing_the_DOTP = {
+			name = establishing_the_DOTP
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				stability_weekly = 0.05
+			}
+		}	
 	}
 }

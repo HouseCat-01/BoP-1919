@@ -1,0 +1,34 @@
+﻿###########
+#RSFR Events
+###########
+
+add_namespace = rsfr
+
+# Recieves request for aid
+country_event = {
+	id = rsfr.1
+	title = rsfr.1.t
+	desc = rsfr.1.d
+	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option { #send aid
+		name = rsfr.1.a
+		SOV = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 100
+				target = HUN
+			}
+		}
+		add_political_power = -40
+	}
+	option {
+		name = rsfr.1.b
+		SOV = {
+			add_political_power = 10
+			add_ideas = SOV_abandoned_ally
+		}
+	}	
+}

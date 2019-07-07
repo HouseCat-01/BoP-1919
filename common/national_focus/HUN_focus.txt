@@ -11,7 +11,7 @@ focus_tree = {
 	focus = { 
 		id = HUN_acceptthevixnote
 		icon = GFX_goal_tripartite_pact
-		x = 3
+		x = 5
 		y = 0
 		available = { always = no }
 		cost = 10
@@ -38,7 +38,7 @@ focus_tree = {
 	focus = { 
 		id = HUN_karolyiresigns
 		icon = GFX_focus_rom_coup
-		x = 7
+		x = 9
 		y = 0
 		cost = 10
 		available = { always = no }
@@ -59,8 +59,8 @@ focus_tree = {
 	focus = {
 		id = HUN_mergewithkmp
 		icon = GFX_focus_rom_coup
-		x = 9
-		y = 3
+		x = 11
+		y = 1
 		cost = 4
 		prerequisite = {
 			focus = HUN_karolyiresigns
@@ -80,8 +80,8 @@ focus_tree = {
 	#Soc-dem party sides with the nationalists
 	focus = {
 		id = HUN_sidewithnationalists
-		x = 5
-		y = 3
+		x = 7
+		y = 1
 		cost = 4
 		prerequisite = {
 			focus = HUN_karolyiresigns
@@ -101,8 +101,9 @@ focus_tree = {
 	#Nationalize the estates
 	focus = {
 		id = HUN_nationalizetheestates
-		x = 7
-		y = 5
+		x = 13
+		y = 2
+		cost = 0
 		prerequisite = { focus = HUN_mergewithkmp }
 		completion_reward = {
 			add_popularity = {
@@ -119,21 +120,23 @@ focus_tree = {
 	#Introduce collectivization
 	focus = {
 		id = HUN_collectivization
-		x = 6
-		y = 7
+		x = 12
+		y = 3
+		cost = 0
 		prerequisite = { focus = HUN_nationalizetheestates }
 		mutually_exclusive = { focus = HUN_landtopeasants }
-		completion_reward = {
-			consumer_goods_factor = -0.08
-		}
+		#completion_reward = {
+			#consumer_goods_factor = -0.08
+		#}
 	}
 	
 	#Distribute land to peasants
 	focus = {
 		id = HUN_landtopeasants
-		x = 8
-		y = 7
-		prerequisite = { focus = HUN_collectivization }
+		x = 14
+		y = 3
+		cost = 0
+		prerequisite = { focus = HUN_nationalizetheestates }
 		mutually_exclusive = { focus = HUN_collectivization }
 		completion_reward = {
 			modify_timed_idea = {
@@ -142,5 +145,52 @@ focus_tree = {
 			}
 		}
 	}
+	
+	#Dictatorship of the Proletariat
+	focus = {
+		id = HUN_dotp
+		x = 18
+		y = 2
+		cost = 0
+		prerequisite = { focus = HUN_mergewithkmp }
+		completion_reward = {
+			add_timed_idea = { 
+				idea = HUN_establishing_the_DOTP
+				days = 21
+			}
+		}
+	}
+	
+	#Internationalism
+	focus = {
+		id = HUN_internationalism
+		x = 16
+		y = 3
+		cost = 0
+		prerequisite = { focus = HUN_dotp }
+		completion_reward = {
+			SOV = { country_event = { id = rsfr.1 } }
+		}
+	}
+	
+	#Call upon RSFR
+	focus = {
+		id = HUN_calluponthersfr
+		x = 16
+		y = 4
+		cost = 0
+		available = { has_war = yes }
+		prerequisite = { focus = HUN_internationalism }
+		completion_reward = {
+			SOV = {
+				add_to_war = {
+					targeted_alliance = PREV
+					enemy = ROM
+					hostility_reason = asked_to_join
+				}
+			}
+		}
+	
+	
 	#End of focuses 
  }

@@ -13,7 +13,12 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	immediate = { add_ideas = HUN_government_crisis }
+	immediate = { 
+		add_timed_idea = { 
+			idea = HUN_government_crisis
+			days = 45
+		}
+	}
 	
 	option = { #comply
 		name = hungary1919.1.a
