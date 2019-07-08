@@ -8,7 +8,7 @@ ideas = {
 				political_power_cost = 0.05
 				war_support_factor = -0.10
 				conscription_factor = -0.10
-				mobilization_laws_cost_factor = 0.1
+				mobilization_laws_cost_factor = 0.10
 			}
 		}
 		GEN_legacy_of_the_great_war_2 = {
@@ -47,6 +47,14 @@ ideas = {
 			modifier = {
 				army_core_attack_factor = 0.10
 				army_core_defence_factor = 0.10
+			}
+		}
+		GEN_recently_demobilized = {
+			name = recently_demobilized
+			allowed = { always = no }
+			modifier = {
+				mobilization_laws_cost_factor = 0.20
+				conscription_factor = -0.10
 			}
 		}
 	}
