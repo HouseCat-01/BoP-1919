@@ -103,6 +103,10 @@ country_event = {
 				target = CZE
 			}
 		}
+		if = {
+			limit = { NOT = { has_country_flag = alienated_nationalists } }
+			add_ideas = HUN_nationalist_support 
+		}
 	}
 	option = { #concede
 		name = hungary.4.b
@@ -111,6 +115,8 @@ country_event = {
 			idea = HUN_nationalist_reaction
 			days = 45
 		}
+		remove_ideas = HUN_nationalist_support
+		set_country_flag = alienated_nationalists
 	}
 }
 
@@ -164,6 +170,10 @@ country_event = {
 				type = take_claimed_state
 				target = BRP
 			}
+			if = {
+				limit = { NOT = {has_country_flag = alienated_nationalists}}
+				add_ideas = HUN_nationalist_support 
+			}
 		}
 	}
 	option = { #concede
@@ -173,6 +183,8 @@ country_event = {
 			idea = HUN_nationalist_reaction
 			days = 10
 		}
+		remove_ideas = HUN_nationalist_support
+		set_country_flag = alienated_nationalists
 	}
 }
 

@@ -33,7 +33,7 @@ ideas = {
 			name = agricultural_propaganda
 			allowed = { always = no }
 			modifier = {
-				stability_weekly = 0.05
+				stability_weekly = 0.03
 				communism_drift = 0.04
 			}
 		}
@@ -93,6 +93,7 @@ ideas = {
 				mobilization_laws_cost_factor = 0.30
 				army_org_factor = -0.05
 				conscription = 0.005
+				army_attack_factor = -0.05
 			}
 		}
 	}

@@ -139,9 +139,19 @@ focus_tree = {
 		prerequisite = { focus = HUN_nationalizetheestates }
 		mutually_exclusive = { focus = HUN_collectivization }
 		completion_reward = {
-			modify_timed_idea = {
-				idea = HUN_agricultural_propaganda
-				days = 40
+			if = {
+				limit = { NOT = {has_idea = HUN_agricultural_propaganda } }
+				add_timed_idea = {
+					idea = HUN_agricultural_propaganda
+					days = 30
+				}			
+			}
+			if = {
+				limit = { has_idea = HUN_agricultural_propaganda }
+				modify_timed_idea = {
+					idea = HUN_agricultural_propaganda
+					days = 30
+				}
 			}
 		}
 	}
@@ -302,6 +312,7 @@ focus_tree = {
 				type = take_claimed_state
 				target = ROM
 			}
+			add_ideas = { HUN_nationalist_support }
 		}
 	}
 	
@@ -314,6 +325,7 @@ focus_tree = {
 		prerequisite = { focus = HUN_warwithromania }
 		completion_reward = {
 			CZE = { country_event = { id = hungary1919.3 days = 1 } } #need to change to send to current owner
+			add_ideas = { HUN_nationalist_support }
 		}
 	}
 	
@@ -324,8 +336,8 @@ focus_tree = {
 		y = 4
 		cost = 1
 		prerequisite = { focus = HUN_warwithromania }
-		completion_reward = { country_event = { id = hungary1919.6 days = 1 } } #need to change to send to current owner
-		
+		completion_reward = { 
+			BRP = { country_event = { id = hungary1919.6 days = 1 } } #need to change to send to current owner
 		}
 	}
 	
