@@ -92,7 +92,7 @@ country_event = {
 country_event = {
 	id = hungary1919.4
 	title = hungary1919.4.t
-	desc = hungary1919.d
+	desc = hungary1919.4.d
 	
 	is_triggered_only = yes
 	
@@ -119,6 +119,68 @@ country_event = { #news event
 	id = hungary1919.5
 	title = hungary1919.5.t
 	desc = hungary1919.5.d
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary1919.5.a
+	}
+}
+
+#demand Banat
+country_event = {
+	id = hungary1919.6
+	title = hungary1919.6.t
+	desc = hungary1919.6.d
+	
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = hungary1919.6.a
+		HUN = { 
+			transfer_state = 82 
+			country_event = { id = hungary1919.8 days = 1 }
+		}
+	}
+	option = { #refuse
+		name = hungary1919.6.b
+		HUN = { country_event = {id = hungary1919.7 days = 1 } }
+	}
+}
+
+#If banat refuses to cede banat
+country_event = {
+	id = hungary1919.7
+	title = hungary1919.7.t
+	desc = hungary1919.7.d
+	
+	is_triggered_only = yes
+	
+	option = { #to war
+		name = hunagry.7.a
+		HUN = { declare_war_on = {
+				type = take_claimed_state
+				target = BRP
+			}
+		}
+	}
+	option = { #concede
+		name = hungary.7.b
+		#add_ideas = HUN_nationalist_agitation #seems excessive in this case
+		add_timed_idea = {
+			idea = HUN_nationalist_reaction
+			days = 10
+		}
+	}
+}
+
+#If banat agrees to cede banat
+country_event = { #news event
+	id = hungary1919.8
+	title = hungary1919.8.t
+	desc = hungary1919.8.d
 	
 	major = yes
 	

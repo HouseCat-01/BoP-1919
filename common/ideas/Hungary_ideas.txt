@@ -87,9 +87,13 @@ ideas = {
 			}
 		}
 		HUN_volunteer_army = {
-			mobilization_laws_cost_factor = 0.50
-			army_org_factor = -0.05
-			conscription = 0.005
+			name = volunteer_army
+			allowed = { always = no }
+			modifier = {
+				mobilization_laws_cost_factor = 0.30
+				army_org_factor = -0.05
+				conscription = 0.005
+			}
 		}
 	}
 }

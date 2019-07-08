@@ -308,16 +308,26 @@ focus_tree = {
 	#Demand upper Hungary
 	focus = {
 		id = HUN_demandupperhungary
-		x = 9
+		x = 8
 		y = 4
 		cost = 1
 		prerequisite = { focus = HUN_warwithromania }
-		completion_reward {
-			CZE = { country_event = { id = hungary1919.3 days = 1 } }
+		completion_reward = {
+			CZE = { country_event = { id = hungary1919.3 days = 1 } } #need to change to send to current owner
 		}
 	}
 	
 	#Demand Banat
+	focus = { 
+		id = HUN_demandbanat
+		x = 10
+		y = 4
+		cost = 1
+		prerequisite = { focus = HUN_warwithromania }
+		completion_reward = { country_event = { id = hungary1919.6 days = 1 } } #need to change to send to current owner
+		
+		}
+	}
 	
 	#Call upon the szkelers
 	#End of focuses 

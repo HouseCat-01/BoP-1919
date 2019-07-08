@@ -33,5 +33,21 @@ ideas = {
 				mobilization_laws_cost_factor = 0.20
 			}
 		}
+		GEN_nationalist_army_1 = {
+			name = nationalist_army
+			allowed = { always = no }
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		GEN_nationalist_army_2 = {
+			name = nationalist_army
+			allowed = { always = no }
+			modifier = {
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
 	}
 }

@@ -23,6 +23,7 @@ add_ideas = {
 	HUN_communist_agitators
 	GEN_legacy_of_the_great_war_1
 	HUN_volunteer_army
+	GEN_nationalist_army_2
 }
 
 
