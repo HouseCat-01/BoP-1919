@@ -1,0 +1,37 @@
+ideas = {
+	country = {
+		GEN_legacy_of_the_great_war_1 = {
+			name = legacy_of_the_great_war
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.10
+				political_power_cost = 0.05
+				war_support_factor = -0.10
+				conscription_factor = -0.10
+				mobilization_laws_cost_factor = 0.1
+			}
+		}
+		GEN_legacy_of_the_great_war_2 = {
+			name = legacy_of_the_great_war
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.15
+				political_power_cost = 0.10
+				war_support_factor = -0.15
+				conscription_factor = -0.15
+				mobilization_laws_cost_factor = 0.15
+			}
+		}
+		GEN_legacy_of_the_great_war_3 = {
+			name = legacy_of_the_great_war
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.20
+				political_power_cost = 0.20
+				war_support_factor = -0.20
+				conscription_factor = -0.20
+				mobilization_laws_cost_factor = 0.20
+			}
+		}
+	}
+}
