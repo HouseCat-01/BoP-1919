@@ -2,6 +2,7 @@ ideas = {
 	country = {
 		HUN_disjointed_government = {
 			name = disjointed_government
+			picture = generic_disjointed_gov
 			allowed = { tag = HUN }
 			modifier = {
 				stability_factor = -0.20
@@ -84,23 +85,6 @@ ideas = {
 				war_support_factor = 0.10
 				stability_factor = 0.05
 				conscription = 0.005
-			}
-		}
-		HUN_volunteer_army = {
-			name = volunteer_army
-			allowed = { always = no }
-			modifier = {
-				army_org_factor = -0.05
-				conscription = 0.005
-				army_attack_factor = -0.05
-			}
-		}
-		GEN_reliance_on_volunteers = {
-			name = reliance_on_volunteers
-			allowed = { always = no }
-			modifier = {
-				mobilization_laws_cost_factor = 0.20
-				conscription_factor = -0.10
 			}
 		}
 	}

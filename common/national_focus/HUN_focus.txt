@@ -285,7 +285,7 @@ focus_tree = {
 	focus = {
 		id = HUN_peacewithromania
 		x = 7
-		y = 3
+		y = 4
 		cost = 1
 		prerequisite = { focus = HUN_suppressthecommunists }
 		mutually_exclusive = { focus = HUN_warwithromania }
@@ -294,11 +294,30 @@ focus_tree = {
 		}
 	}
 	
+	#Call volunteers
+	focus = {
+		id = HUN_callvolunteers
+		x = 10
+		y = 3
+		cost = 1
+		prerequisite = {
+			focus = HUN_suppressthecommunists
+			focus = HUN_mergewithkmp 
+		}
+		completion_reward = {
+			add_ideas = {
+				GEN_new_volunteer_army
+				GEN_reliance_on_volunteers
+				volunteer_only
+			}
+		}
+	}
+	
 	#war with Romania
 	focus = {
 		id = HUN_warwithromania
 		x = 10
-		y = 3
+		y = 4
 		cost = 1
 		prerequisite = { 
 			
@@ -320,7 +339,7 @@ focus_tree = {
 	focus = {
 		id = HUN_demandupperhungary
 		x = 8
-		y = 4
+		y = 5
 		cost = 1
 		prerequisite = { focus = HUN_warwithromania }
 		completion_reward = {
@@ -333,7 +352,7 @@ focus_tree = {
 	focus = { 
 		id = HUN_demandbanat
 		x = 10
-		y = 4
+		y = 5
 		cost = 1
 		prerequisite = { focus = HUN_warwithromania }
 		completion_reward = { 
