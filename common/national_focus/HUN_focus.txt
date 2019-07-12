@@ -166,7 +166,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = { 
 				idea = HUN_establishing_the_DOTP
-				days = 21
+				days = 35
 			}
 		}
 	}
@@ -264,7 +264,6 @@ focus_tree = {
 		prerequisite = { focus = HUN_dotp }
 		available = { has_government = communism }
 		completion_reward = {
-			#add mission start here
 			add_ideas = { HUN_red_terror }
 		}
 	}

@@ -1,0 +1,5 @@
+HUN_the_red_terror = {
+	icon = generic_propaganda
+	allowed = { tag = HUN }
+	available = { has_idea = HUN_establishing_the_DOTP } 
+}

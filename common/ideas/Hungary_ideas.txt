@@ -87,5 +87,30 @@ ideas = {
 				conscription = 0.005
 			}
 		}
+		HUN_lenin_boys = {
+			name = lenin_boys
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				conscription_factor = -0.02
+				consumer_goods_factor = -0.05
+			}
+		}
+		HUN_red_terror_failed = {
+			name = red_terror_failed
+			allowed = { always = no }
+			cancel = { NOT = { has_government = communism } }
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+		HUN_red_terror_success = {
+			name = red_terror_success
+			allowed = { always = no }
+			cancel = { NOT = { has_government = communism } }
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
 	}
 }
