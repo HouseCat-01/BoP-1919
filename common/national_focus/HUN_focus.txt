@@ -103,7 +103,7 @@ focus_tree = {
 	#Nationalize the estates
 	focus = {
 		id = HUN_nationalizetheestates
-		x = 13
+		x = 14
 		y = 2
 		cost = 1
 		prerequisite = { focus = HUN_mergewithkmp }
@@ -119,7 +119,7 @@ focus_tree = {
 	#Introduce collectivization
 	focus = {
 		id = HUN_collectivization
-		x = 12
+		x = 13
 		y = 3
 		cost = 1
 		prerequisite = { focus = HUN_nationalizetheestates }
@@ -133,7 +133,7 @@ focus_tree = {
 	#need to add an if block that only uses modify_timed_idea if idea already present, otherwise reapply timed_idea
 	focus = {
 		id = HUN_landtopeasants
-		x = 14
+		x = 15
 		y = 3
 		cost = 1
 		prerequisite = { focus = HUN_nationalizetheestates }
@@ -166,7 +166,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = { 
 				idea = HUN_establishing_the_DOTP
-				days = 35
+				days = 35 
 			}
 		}
 	}
@@ -174,7 +174,7 @@ focus_tree = {
 	#Internationalism
 	focus = {
 		id = HUN_internationalism
-		x = 16
+		x = 18
 		y = 3
 		cost = 1
 		prerequisite = { focus = HUN_dotp }
@@ -186,7 +186,7 @@ focus_tree = {
 	#Call upon RSFR
 	focus = {
 		id = HUN_calluponthersfr
-		x = 16
+		x = 18
 		y = 4
 		cost = 1
 		available = { 
@@ -204,67 +204,6 @@ focus_tree = {
 					hostility_reason = asked_to_join
 				}
 			}
-		}
-	}
-	
-	focus = {
-		id = HUN_purgetheright
-		x = 18
-		y = 3
-		cost = 1
-		prerequisite = { focus = HUN_dotp }
-		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.05
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.05
-			}
-			add_popularity = {
-				ideology = market_liberal
-				popularity = -0.05
-			}
-			add_popularity = {
-				ideology = paternal_autocrat
-				popularity = -0.05
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.08
-			}
-		}
-	}
-	
-	focus = {
-		id = HUN_removethesocdems
-		x = 18
-		y = 4
-		prerequisite = { focus = HUN_purgetheright }
-		cost = 1
-		completion_reward = {
-			add_popularity = {
-				ideology = social_democrat
-				popularity = -0.10
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-		}
-	}
-	
-	#The Red Terror - Unlocks more decisions
-	focus = { 
-		id = HUN_redterror
-		x = 20
-		y = 3
-		cost = 1
-		prerequisite = { focus = HUN_dotp }
-		available = { has_government = communism }
-		completion_reward = {
-			add_ideas = { HUN_red_terror }
 		}
 	}
 	

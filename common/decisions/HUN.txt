@@ -1,15 +1,29 @@
 HUN_the_red_terror = {
+
+	HUN_establish_the_DOTP = {
+		is_good = no
+		days_mission_timeout = 5
+		fire_only_once = yes
+		activation = { has_idea = HUN_establishing_the_DOTP }  
+		available = { NOT = { has_idea = HUN_establishing_the_DOTP } }
+	}
+	
 	HUN_start_the_red_terror = {
 		fire_only_once = yes
 		available = { has_idea = HUN_establishing_the_DOTP }
 		complete_effect = {
 			add_ideas = { HUN_red_terror }
+			modify_timed_idea = {
+				idea = HUN_establishing_the_DOTP
+				days = 30
+			}
 		}
 	}
+	
 	HUN_end_the_red_terror = {
-		is_good = yes
+		is_good = no
 		days_mission_timeout = 30
-		#fire_only_once = yes
+		fire_only_once = yes
 		allowed = { tag = HUN }
 		available = { has_country_flag = done } 
 		activation = { has_idea = HUN_red_terror } 
@@ -23,12 +37,54 @@ HUN_the_red_terror = {
 		}
 	}
 	
-	form_lenin_boys = {
+	HUN_form_lenin_boys = {
 		fire_only_once = yes
 		visible = { has_idea = HUN_red_terror }
 		complete_effect = {
 			add_ideas = HUN_lenin_boys
 			add_manpower = -300
+		}
+	}
+	
+	HUN_purge_the_right = {
+		fire_only_once = yes
+		visible = { has_idea = HUN_red_terror }
+		complete_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.08
+			}
+		}
+	}
+	
+	HUN_purge_the_soc_dems = {
+		fire_only_once = yes
+		visible = { has_idea = HUN_red_terror }
+		complete_effect = {
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 		}
 	}
 }
